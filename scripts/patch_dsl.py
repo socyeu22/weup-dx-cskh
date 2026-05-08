@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Patch Dify_cskh_dsl.yml to add human handoff tags."""
+"""Patch dify/cskh_main.yml to add human handoff tags."""
 
 import re
 import shutil
 from pathlib import Path
 
-FILE = Path('/Users/phamthidung/Documents/weup-cskh/Dify_cskh_dsl.yml')
+FILE = Path(__file__).parent.parent / 'dify' / 'cskh_main.yml'
 
 # Backup
 shutil.copy(FILE, FILE.with_suffix('.yml.bak'))
