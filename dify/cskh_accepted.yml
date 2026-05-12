@@ -4,7 +4,7 @@ app:
   icon_background: '#FFEAD5'
   icon_type: emoji
   mode: advanced-chat
-  name: CSKH VAR
+  name: CSKH PRODUCTION
   use_icon_as_answer_icon: false
 dependencies:
 - current_identifier:
@@ -725,7 +725,7 @@ workflow:
             variable_selector:
             - sys
             - files
-          enabled: true
+          enabled: false
       height: 116
       id: llm_preprocess
       position:
@@ -1033,9 +1033,9 @@ workflow:
             ### DA01
             | Combo | Giá | Ship | Quà tặng |
             |---|---|---|---|
-            | Combo 5 (5 sách) | 689.000đ | Freeship | 5 ebook + Khóa học ứng dụng AI |
-            | Combo 4 (4 sách) | 559.000đ | Freeship | 5 ebook |
-            | Combo 3 (3 sách) | 429.000đ | Freeship | 5 ebook |
+            | Combo 5 (5 sách) | 749.000đ | Freeship | 5 ebook + Khóa học ứng dụng AI |
+            | Combo 4 (4 sách) | 599.000đ | Freeship | 5 ebook |
+            | Combo 3 (3 sách) | 469.000đ | Freeship | 5 ebook |
             | Combo 2 (2 sách) | 329.000đ | Ship 30k | Không quà |
             | Lẻ (1 sách) | 179.000đ | Ship 30k | Không quà |
 
@@ -1107,7 +1107,7 @@ workflow:
             variable_selector:
             - sys
             - files
-          enabled: true
+          enabled: false
       height: 116
       id: consult_llm
       position:
@@ -1173,9 +1173,9 @@ workflow:
             ### DA01
             | Combo | Giá | Ship | Quà tặng |
             |---|---|---|---|
-            | Combo 5 (5 sách) | 689.000đ | Freeship | 5 ebook + Khóa học ứng dụng AI |
-            | Combo 4 (4 sách) | 559.000đ | Freeship | 5 ebook |
-            | Combo 3 (3 sách) | 429.000đ | Freeship | 5 ebook |
+            | Combo 5 (5 sách) | 749.000đ | Freeship | 5 ebook + Khóa học ứng dụng AI |
+            | Combo 4 (4 sách) | 599.000đ | Freeship | 5 ebook |
+            | Combo 3 (3 sách) | 469.000đ | Freeship | 5 ebook |
             | Combo 2 (2 sách) | 329.000đ | Ship 30k | Không quà |
             | Lẻ (1 sách) | 179.000đ | Ship 30k | Không quà |
 
@@ -1235,7 +1235,7 @@ workflow:
             variable_selector:
             - sys
             - files
-          enabled: true
+          enabled: false
       height: 132
       id: buy_llm
       position:
@@ -1344,9 +1344,9 @@ workflow:
             ### DA01
             | Combo | Giá | Ship | Quà tặng |
             |---|---|---|---|
-            | Combo 5 (5 sách) | 689.000đ | Freeship | 5 ebook + Khóa học ứng dụng AI |
-            | Combo 4 (4 sách) | 559.000đ | Freeship | 5 ebook |
-            | Combo 3 (3 sách) | 429.000đ | Freeship | 5 ebook |
+            | Combo 5 (5 sách) | 749.000đ | Freeship | 5 ebook + Khóa học ứng dụng AI |
+            | Combo 4 (4 sách) | 599.000đ | Freeship | 5 ebook |
+            | Combo 3 (3 sách) | 469.000đ | Freeship | 5 ebook |
             | Combo 2 (2 sách) | 329.000đ | Ship 30k | Không quà |
             | Lẻ (1 sách) | 179.000đ | Ship 30k | Không quà |
 
@@ -1404,7 +1404,7 @@ workflow:
             variable_selector:
             - sys
             - files
-          enabled: true
+          enabled: false
       height: 116
       id: order_info_llm
       position:
@@ -1536,9 +1536,9 @@ workflow:
             ### DA01
             | Combo | Giá | Ship |
             |---|---|---|
-            | Combo 5 | 689.000đ | Freeship |
-            | Combo 4 | 559.000đ | Freeship |
-            | Combo 3 | 429.000đ | Freeship |
+            | Combo 5 | 749.000đ | Freeship |
+            | Combo 4 | 599.000đ | Freeship |
+            | Combo 3 | 469.000đ | Freeship |
             | Combo 2 | 329.000đ | Ship 30k |
             | Lẻ | 179.000đ | Ship 30k |
 
@@ -1569,7 +1569,7 @@ workflow:
             variable_selector:
             - sys
             - files
-          enabled: true
+          enabled: false
       height: 116
       id: confirm_llm
       position:
@@ -1693,7 +1693,7 @@ workflow:
             variable_selector:
             - sys
             - files
-          enabled: true
+          enabled: false
       height: 116
       id: greeting_llm
       position:
@@ -1805,7 +1805,7 @@ workflow:
             variable_selector:
             - sys
             - files
-          enabled: true
+          enabled: false
       height: 116
       id: complaint_llm
       position:
@@ -1907,7 +1907,7 @@ workflow:
             variable_selector:
             - sys
             - files
-          enabled: true
+          enabled: false
       height: 132
       id: fallback_llm
       position:
@@ -2009,7 +2009,7 @@ workflow:
             variable_selector:
             - sys
             - files
-          enabled: true
+          enabled: false
       height: 116
       id: faq_llm
       position:
@@ -2141,7 +2141,7 @@ workflow:
             variable_selector:
             - sys
             - files
-          enabled: true
+          enabled: false
       height: 116
       id: offtopic_llm
       position:
