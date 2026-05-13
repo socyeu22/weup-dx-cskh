@@ -65,7 +65,7 @@ Pancake FB
 Pancake FB
     → FastAPI Webhook Server
         ├── [INBOX] LangGraph inbox_graph
-        │         load_state → detect_image → debounce → guard_handoff
+        │         load_state → detect_image → guard_handoff → debounce
         │         → call_dify → parse_response → route_response
         │         → send_pancake + save_state
         │         (nếu has_handoff: notify_agent thay vì save pending)

@@ -1,5 +1,5 @@
 {
-  "nodes" [
+  "nodes": [
     {
       "id": "start",
       "type": "start",
@@ -52,8 +52,6 @@
         "else": "fallback"
       }
     },
-
-    // ===== ORDER FLOW =====
 
     {
       "id": "order_request",
@@ -123,8 +121,6 @@
       }
     },
 
-    // ===== CONSULT =====
-
     {
       "id": "consult",
       "type": "llm",
@@ -133,8 +129,6 @@
         "prompt": "Tư vấn sản phẩm dựa trên câu hỏi: {{user_query}}"
       }
     },
-
-    // ===== FALLBACK =====
 
     {
       "id": "fallback",
