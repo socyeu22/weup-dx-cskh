@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Backup files
+*.bak
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Numbers (Apple Spreadsheet binary)
+*.numbers
