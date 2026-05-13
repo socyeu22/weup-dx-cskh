@@ -102,3 +102,61 @@ Before implementing:
 - Comment flow **không có debounce**, không có guard_handoff, không trigger handoff
 - `dify_conversation_id` phải được lưu ngay sau Dify response đầu tiên
 - FastAPI phải trả `200` ngay (`asyncio.create_task`), graph chạy background
+
+---
+
+## 8. Local Development
+
+### Chạy FastAPI không cần Docker
+
+```bash
+cd langgraph/app
+pip install -r requirements.txt
+uvicorn main:app --reload --port 8000
+```
+
+Kiểm tra:
+```bash
+curl http://localhost:8000/health
+# → {"status": "ok"}
+
+curl -X POST http://localhost:8000/webhook/pancake \
+  -H "Content-Type: application/json" \
+  -d '{"page_id":"test","data":{"conversation":{"from":{"id":"psid123"},"id":"conv1","type":"INBOX"},"message":{"id":"msg1","original_message":"xin chào","attachments":[]}}}'
+# → {"status": "accepted"}
+```
+
+### Chạy Redis + PostgreSQL local (Docker)
+
+```bash
+cd langgraph
+docker-compose up redis postgres -d
+```
+
+Khi chạy local, sửa `.env`: dùng `localhost` thay vì tên service (`redis`, `postgres`).
+
+### Expose localhost cho Pancake webhook
+
+```bash
+ngrok http 8000
+# → https://abc123.ngrok.io
+```
+
+Trỏ webhook page test Pancake → `https://abc123.ngrok.io/webhook/pancake`.
+
+### Test từng phase
+
+| Phase | Cách test local |
+|---|---|
+| Phase 1 | `curl /health` + gửi mock payload, xem log |
+| Phase 2 | `pytest` unit test store với Redis/Postgres local |
+| Phase 3 | `pytest` + `respx` mock HTTP calls (Dify, Pancake, bot.base) |
+| Phase 4 | `pytest` unit test từng node với mock store + mock services |
+| Phase 5 | E2E với page test Pancake + ngrok |
+
+### Chạy test
+
+```bash
+cd langgraph/app
+pytest tests/ -v
+```
